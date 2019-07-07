@@ -13,3 +13,8 @@ aside{
 footer{
     background-color: rgb(160, 238, 44);
 }
+
+html{
+    font-family: monospace;
+    font-size: 14px;
+}
