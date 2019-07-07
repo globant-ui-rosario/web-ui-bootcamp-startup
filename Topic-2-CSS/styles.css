@@ -1,5 +1,6 @@
 header{
     background-color: #BBBBBB;
+    text-align: center;
 }
 
 nav{
@@ -12,6 +13,7 @@ aside{
 
 footer{
     background-color: rgb(160, 238, 44);
+    text-align: center;
 }
 
 html{
