@@ -35,10 +35,12 @@ html{
 }
 .navigation{
     font-size:12px;
+    padding: 140px;
 }
 .sidebar{
     font-size:10px;
     background-color: #ff00ff;
+    margin: 100px;
 }
 
 .oh-no-inline-styles{
