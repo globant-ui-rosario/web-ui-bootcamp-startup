@@ -6,34 +6,46 @@
     <title>Web UI Bootcamp</title>
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      content="width=device-width, initial-scale=1"
     />
+  
+    <link rel="stylesheet" href="/css/grid.css">
     <link rel="stylesheet" type="text/css" href='styles.css'/>
     <link rel="stylesheet" href="normalize.css"/>
   </head>
+
   <body>
-    <header class='header'>
-      This is the root header
-    </header>
-    <nav class='navigator'>
-      This is a nav
-    </nav>
-    <section class='content'>
-      <header class='oh-no-inline-styles' style='background:red'>
-        This is the header of the section
-      </header>
-      <article>
-        This is an article
-      </article>
-      <footer class='footer'>
-        This is the footer of the section
-      </footer>
-    </section>
-    <aside class='sidebar'>
-      This is the aside
-    </aside>
-    <footer>
-      This is the root footer
-    </footer>
-  </body>
+
+        <div class="container">
+            <header class="header column full">
+                This is the root header
+            </header>
+    
+            <div class="row clearfix">
+                <nav class="navigation column third">
+                    This is a nav
+                </nav>
+    
+                <section class="content column third">
+                    <header class='inner'>
+                    This is the header of the section
+                    </header>
+                    <article>
+                    This is an article
+                    </article>
+                    <footer class='inn'>
+                    This is the footer of the section
+                    </footer>
+                </section>
+    
+                <aside class="sidebar column third">
+                    This is the aside
+                </aside>
+            </div>
+    
+            <footer class="footer column full">
+                This is the root footer
+            </footer>
+        </div>
+    </body>
 </html>
