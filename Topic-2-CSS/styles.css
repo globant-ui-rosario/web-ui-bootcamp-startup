@@ -19,13 +19,16 @@ footer{
 html{
     font-family: monospace;
     font-size: 14px;
+    font-weight: bolder;
 }
 
 .header{
     font-size: 46px;
+    background-color: #ff00ff;
 } 
 .footer{ 
     font-size:10px;
+    background-color: #ff00ff;
 }
 .content{
     font-size:14px;
@@ -35,4 +38,9 @@ html{
 }
 .sidebar{
     font-size:10px;
+    background-color: #ff00ff;
+}
+
+.oh-no-inline-styles{
+    background:green !important;
 }
