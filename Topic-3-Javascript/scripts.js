@@ -1,18 +1,5 @@
-
-
-function check(word){
-    if (typeof word === "string")
-      return word.toLowerCase() === word.toLowerCase().split("").reverse().join("");
-    else {
-    return "Please enter a string."}
-  }
-  
-  console.log(checkPal("Racecar"));    
-  /* true */
-  console.log(checkPal("racecar"));     
-  /* true */
-  console.log(checkPal("race"));          
-  /* false*/
-  console.log(checkPal(12345));         
-  /* Please enter a string.*/
-
+let day = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+function daysAfter(initial, n) {
+    const initialIndex = day.indexOf(initial);
+    return day[(initialIndex + n) % day.length];
+}
