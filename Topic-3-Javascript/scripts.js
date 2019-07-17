@@ -1,5 +1,15 @@
-let day = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
-function daysAfter(initial, n) {
-    const initialIndex = day.indexOf(initial);
-    return day[(initialIndex + n) % day.length];
+const sayHowdyBtn = document.querySelector('button[name="henlo"]');
+
+function initial(event) {
+
+  const sectionEl = document.querySelector('section');
+  
 }
+
+ function sayHenlo() {
+  alert('Hello!');
+}
+
+window.addEventListener('load', initial);
+
+ sayHowdyBtn.addEventListener('click', sayHenlo);
