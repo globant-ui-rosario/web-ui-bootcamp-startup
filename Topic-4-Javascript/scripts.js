@@ -57,3 +57,19 @@ class Actor {
     this.age = age;
   }
 }
+
+addCast(cast) {
+  this.cast = this.cast.concat(cast);
+  }
+}
+
+const terminator = new Movie('Terminator I', 1985, 60);
+const arnold = new Actor('Arnold Schwarzenegger', 50);
+const otherCast = [
+new Actor('Paul Winfield', 50),
+new Actor('Michael Biehn', 50),
+new Actor('Linda Hamilton', 50)
+];
+
+terminator.addCast(arnold);
+terminator.addCast(otherCast);
