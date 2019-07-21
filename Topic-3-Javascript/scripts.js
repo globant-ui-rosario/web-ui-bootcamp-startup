@@ -1,40 +1,16 @@
-'use strict';
-
-async function httpGetJSON(url, callback) {
-  try {
-    const response = await fetch(url);
-    const data = await response.json();
-    callback(data);
-  } catch (error) {
-    console.error(error);
-  }
+function Table(matrixOfData) {
+  const table = document.createElement('table');
+  table.setAttribute("border","2")
+  table.setAttribute("bordercolor","green")
+  matrixOfData.forEach(row => {
+    let newRow = table.insertRow();
+    row.forEach(cell => {
+      let newCell = newRow.insertCell();
+      newCell.appendChild(document.createTextNode(cell));
+    });
+  });
+  return table;
 }
-
-
-function showJSRep(search) {
-  const repositories = document.querySelector('ul');
-  httpGetJSON(
-    `https://api.github.com/search/repositories?q=JavaScript`,
-    data => {
-      data.items.forEach(repo => {
-        let repository = document.createElement('li');
-        let repositoryName = document.createElement('h2');
-        let repositoryDescription = document.createElement('p');
-        let repositoryURL = document.createElement('a');
-        repositoryURL.setAttribute('href', repo.html_url);
-        repositoryURL.appendChild(document.createTextNode(repo.name));
-        repositoryName.appendChild(repositoryURL);
-        repositoryDescription.appendChild(
-          document.createTextNode(repo.description || '')
-        );
-        repository.appendChild(repositoryName);
-        repository.appendChild(repositoryDescription);
-        repositories.appendChild(repository);
-      });
-    }
-  );
-}
-
- showJSRep('');
-
+ const dataTable = [['D', 'e', 's', 'p', 'a', 'c', 'i', 't','o'], [1,2,3,4,5,6,7,8,9], ['D', 'e', 's', 'p', 'a', 'c', 'i', 't','o']];
+document.querySelector('body').appendChild(Table(dataTable));
 
