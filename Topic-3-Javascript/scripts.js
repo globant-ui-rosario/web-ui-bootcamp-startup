@@ -1,24 +1,40 @@
-const sectionEl = document.querySelector('section');
-const sayHowdyBtn = document.querySelector('button[name="henlo"]');
-const getCNJokeBtn = document.querySelector('button[name="joke"]');
+'use strict';
 
- sayHowdyBtn.addEventListener('click', function sayHenlo(){
-  alert('Hello!');
- 
-});
-  
-
-
-function getCNJoke() {
-  const request = new XMLHttpRequest();
-  request.open('get', 'http://api.icndb.com/jokes/random', true);
-  request.responseType = 'json';
-  request.onload = function() {
-    sectionEl.querySelector('h1').innerHTML = request.response.value.joke;
-  };
-  request.send();
+async function httpGetJSON(url, callback) {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    callback(data);
+  } catch (error) {
+    console.error(error);
+  }
 }
 
- getCNJokeBtn.addEventListener('click', getCNJoke);
+
+function showJSRep(search) {
+  const repositories = document.querySelector('ul');
+  httpGetJSON(
+    `https://api.github.com/search/repositories?q=JavaScript`,
+    data => {
+      data.items.forEach(repo => {
+        let repository = document.createElement('li');
+        let repositoryName = document.createElement('h2');
+        let repositoryDescription = document.createElement('p');
+        let repositoryURL = document.createElement('a');
+        repositoryURL.setAttribute('href', repo.html_url);
+        repositoryURL.appendChild(document.createTextNode(repo.name));
+        repositoryName.appendChild(repositoryURL);
+        repositoryDescription.appendChild(
+          document.createTextNode(repo.description || '')
+        );
+        repository.appendChild(repositoryName);
+        repository.appendChild(repositoryDescription);
+        repositories.appendChild(repository);
+      });
+    }
+  );
+}
+
+ showJSRep('');
 
 
