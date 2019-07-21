@@ -28,7 +28,7 @@ class EventEmitter {
     } else throw new RangeError(`${eventName} no listeners to remove.`);
   }
 }
-
+	
  class Movie extends EventEmitter {
   constructor(name, year, duration) {
     super();
@@ -45,8 +45,18 @@ class EventEmitter {
   resume() {
     this.emit('resume');
   }
+  addCast(cast) {
+    this.cast = this.cast.concat(cast);
+    }
 }
 
+  class Logger {
+    constructor() {}
+
+    log(info) {
+      console.log(info);
+    }
+  }
 const Watchmen = new Movie('Watchmen', 2009, 215);
 const Blade = new Movie('Blade Runner 2049', 2017, 164);
 const Orange = new Movie('Clockwork orange', 1971, 137);
@@ -55,11 +65,6 @@ class Actor {
   constructor(name, age) {
     this.name = name;
     this.age = age;
-  }
-}
-
-addCast(cast) {
-  this.cast = this.cast.concat(cast);
   }
 }
 
@@ -73,3 +78,16 @@ new Actor('Linda Hamilton', 50)
 
 terminator.addCast(arnold);
 terminator.addCast(otherCast);
+
+const logger = new Logger();
+
+ function logPlay() {
+  logger.log("output: The 'play' event has been emitted");
+}
+
+const eventEmitter = new EventEmitter();
+eventEmitter.on('play', logPlay);
+
+ terminator.play();
+
+ eventEmitter.off('play', logPlay);
