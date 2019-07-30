@@ -1,0 +1,113 @@
+html{
+    text-align: center;
+    background-color: #ffbbc6c4
+}
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+/* Small screens (default) */
+html { font-size: 100%; }
+
+/* Medium screens (640px) */
+@media (min-width: 40rem) { 
+  html { font-size: 112%; }
+}
+
+/* Large screens (1024px) */
+@media (min-width: 64rem) { 
+  html { font-size: 120%; }
+}
+.container {
+    margin: 0;
+    max-width: 70rem;
+    width: 100%;
+  }
+
+  @media (min-width: 40rem) {
+    .column {
+      float: left;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    .column.full { width: 100%; }
+    .column.two-thirds { width: 66.7%; }
+    .column.half { width: 50%; }
+    .column.third { width: 32.4%; }
+    .column.fourth { width: 25%; }
+    .column.flow-opposite { float: right; }  
+  }
+
+.header{
+    background-color:#d8539c;
+    border-radius:10px;
+    height:50px;
+    
+}
+.footer{
+    background-color:#9f23be;
+    border-radius:10px;
+    height:55px;
+    
+}
+
+.navigation{
+    height: 550px;
+    background-color: #e23753c4;
+    border-radius: 10px;
+    margin-right: 1px;
+    margin-left: 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+.sidebar{
+    margin-left: 5px;
+    height: 550px;
+    background-color: #8717c7c4;
+    border-radius: 10px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.content{
+    height: 550px;
+    background-color: #876b97c4;
+    border-radius: 10px;
+    margin-right: 8px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+section{
+    max-width: 70rem;
+    width: 100%;
+}
+.inner{
+    height:70px;
+    background-color:#cc46bac4;
+    border-radius: 10px;
+    margin-top:50px;
+    margin-bottom:10px;
+}
+
+article{
+    height:250px;
+    border-radius: 10px;
+    margin-bottom:10px;
+    background-color:#d978e0
+}
+.inn{
+    height:100px;
+    border-radius: 10px;
+    margin-bottom:10px;
+    background-color:#4e1e52
+}
+img{
+    border-radius:5px;
+    margin-top:25px;
+}
