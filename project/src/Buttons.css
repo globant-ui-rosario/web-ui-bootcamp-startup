@@ -1,0 +1,57 @@
+.header-button-container {
+  top: 10%;
+  right: 5%;
+  width: 20%;
+  height: 80%;
+  position: relative;
+  float: right;
+  background-color: white;
+}
+
+.home-button {
+  width: 50%;
+  height: 50%;
+  background-color: rgb(100, 9, 9);
+  display: inline;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}.home-textcontent {
+  left: 34%;
+}
+
+.characters-button {
+  width: 50%;
+  height: 50%;
+  background-color: rgb(32, 76, 28);
+  display: inline;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}.characters-textcontent {
+  left: 18%;
+}
+
+.spells-button {
+  width: 50%;
+  height: 50%;
+  background-color: rgb(14, 51, 100);
+  display: inline;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}.spells-textcontent {
+  left: 34%;
+}
+
+.info-button {
+  width: 50%;
+  height: 50%;
+  background-color: rgb(240, 165, 0);
+  display: inline;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}.info-textcontent {
+  left: 38%;
+}

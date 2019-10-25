@@ -1,0 +1,27 @@
+.section-home {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(100, 9, 9);
+}
+
+.section-characters {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(32, 76, 28);
+}
+
+.section-spells {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(14, 51, 100);
+}
+
+.section-info {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(240, 165, 0);
+}

@@ -8,16 +8,10 @@ import {Link} from 'react-router-dom';
 */
 
 export default class Header extends Component{
-  constructor(props){
-    super(props);
-    this.state = {
-      title: 'Header: Harry Potter Project'
-    }
-  }
   render() {
     return (
       <header className='header'>
-        {this.state.title}
+        {this.props.title}
         <ButtonContainer/>
       </header>
     );
@@ -41,7 +35,11 @@ class Button extends Component {
   render() {
     return (
       <div className={this.props.title.toLowerCase()+'-button'}>
-        <Link to={'/'+this.props.title.toLowerCase()}>{this.props.title}</Link>
+        <Link 
+          style={{textDecoration: 'none', color: 'white', position: 'absolute', top: '25%'}}
+          className={this.props.title.toLowerCase()+'-textcontent'}
+          to={'/'+this.props.title.toLowerCase()}>{this.props.title}
+        </Link>
       </div>
     );
   }

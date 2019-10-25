@@ -1,16 +1,15 @@
 import React, {Component} from 'react';
 import {BrowserRouter} from 'react-router-dom';
 import Router from './Router';
-import Header from './Header';
-import Footer from './Footer';
 import './App.css';
+import './Sections.css';
+import './Buttons.css';
 
 /*
-  This version contains the initial state of the page with either no funcionallity or styles.
-  Only contains the main sections that i've considerate in the previous stage,
-  this main sections are: Header, Content and Footer.
-  Because the content section will be the bigger one in lines of code i'll put the four content sections in separated files,
-  this are Home, Characters, Spells and Info sections.
+  This version contains the second state of the page with styles but no funcionallity.
+  I've decide to separate the styles in three different files for this stage.
+  I've to fix the button textcontent which brokes when resize.
+
 */
 
 class App extends Component {
@@ -19,11 +18,9 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
+      <div className='document'>
         <BrowserRouter>
-          <Header />
           <Router />
-          <Footer />
         </BrowserRouter>
       </div>
     );

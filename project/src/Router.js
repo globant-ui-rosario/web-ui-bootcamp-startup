@@ -8,7 +8,7 @@ import Info from './Info'
 export default class Router extends Component {
   render() {
     return (
-      <div>
+      <div className='content'>
         <Redirect
           from='/'
           to='home'/>
