@@ -9,7 +9,6 @@ import './Buttons.css';
   This version contains the second state of the page with styles but no funcionallity.
   I've decide to separate the styles in three different files for this stage.
   I've to fix the button textcontent which brokes when resize.
-
 */
 
 class App extends Component {

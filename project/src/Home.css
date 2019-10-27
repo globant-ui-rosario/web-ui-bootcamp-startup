@@ -1,0 +1,36 @@
+.home-sections {
+  position: relative;
+  height: 2000px;
+}
+
+.home-gryffindor-section {
+  width: 25%;
+  height: 100%;
+  left: 0%;
+  position: absolute;
+  background-color: rgb(100, 9, 9);
+}
+
+.home-slytherin-section {
+  width: 25%;
+  height: 100%;
+  left: 25%;
+  position: absolute;
+  background-color: rgb(32, 76, 28);
+}
+
+.home-ravenclaw-section {
+  width: 25%;
+  height: 100%;
+  right: 25%;
+  position: absolute;
+  background-color: rgb(14, 51, 100);
+}
+
+.home-hufflepuff-section {
+  width: 25%;
+  height: 100%;
+  right: 0%;
+  position: absolute;
+  background-color: rgb(240, 165, 0);
+}

@@ -17,7 +17,7 @@ export default class Router extends Component {
             path='/home'
             component={Home}/>
           <Route
-            path='/characters'
+            path='/chars'
             component={Characters}/>
           <Route
             path='/spells'

@@ -1,6 +1,17 @@
 import React, {Component} from 'react'
 
-export default class Content extends Component {
+class SearchBar extends Component {
+  constructor(props){
+    super(props);
+  }
+  render() {
+    return (
+      <input className='search-bar' type='text' placeholder='Search...' onChange={this.props.inputChange} value={this.props.valueChange} style={{display: this.props.display}}></input>
+    );
+  }
+}
+
+class Content extends Component {
   constructor(props){
     super(props);
   }
@@ -12,3 +23,6 @@ export default class Content extends Component {
     );
   }
 }
+
+export {Content, SearchBar}
+

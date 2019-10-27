@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import Header from './Header'
-import Content from './Content';
+import {Content} from './Content'
 import Footer from './Footer'
+import Text from './TextContent'
 
 export default class Info extends Component {
   constructor(props){
@@ -17,7 +18,7 @@ export default class Info extends Component {
           title={this.state.content + ' Header'}
         />
         <Content
-          content={this.state.content}
+          content={Text}
         />
         <Footer 
           title={this.state.content + ' Footer'}
