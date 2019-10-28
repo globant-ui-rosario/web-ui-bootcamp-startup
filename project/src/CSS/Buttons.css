@@ -64,14 +64,14 @@
     display: none;
   }
   .header-textcontent {
+    width: 500px;
     margin: 0px;
     position: absolute;
     top: 0px;
     left: 0px;
-    text-align: center;
   }
   .header-mobile-container {
-    display: block;
+    display: inline;
     top: 40px;
     position: relative;
   }

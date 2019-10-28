@@ -3,11 +3,11 @@ import Header from './Header';
 import {Content} from './Content';
 import Footer from './Footer';
 import querystring from 'query-string';
-import './Home.css'
-import GryffindorShield from './Gryffindor.png'
-import SlytherinShield from './Slytherin.jpg'
-import HufflepuffShield from './Hufflepuff.jpg'
-import RavenclawShield from './Ravenclaw.jpg'
+import '../CSS/Home.css'
+import GryffindorShield from '../LOGOS/Gryffindor.png'
+import SlytherinShield from '../LOGOS/Slytherin.jpg'
+import HufflepuffShield from '../LOGOS/Hufflepuff.jpg'
+import RavenclawShield from '../LOGOS/Ravenclaw.jpg'
 
 export default class Home extends Component {
   constructor(props){
@@ -148,6 +148,7 @@ class House extends Component {
     super(props);
     this.state = {
       houses: [],
+      title: 'House'
     }
   }
   componentDidMount() {
@@ -174,26 +175,50 @@ class House extends Component {
         if (house.name === houseName){
           return (
             <div>
-              <ul>
-                <h2><span style={{textDecoration: 'underline'}}>House:</span>{' '+house.name}</h2>
-                <h3><span style={{textDecoration: 'underline'}}>Founder:</span>{' '+house.founder}</h3>
-                <h3><span style={{textDecoration: 'underline'}}>Mascot:</span> {' '+house.mascot.slice(0, 1).toUpperCase()+house.mascot.slice(1, 10)}</h3>
-                <h3><span style={{textDecoration: 'underline'}}>House Ghost:</span>{' '+house.houseGhost}</h3>
-                <h3><span style={{textDecoration: 'underline'}}>Head of House:</span>{' '+house.headOfHouse}</h3>
-                <h3><span style={{textDecoration: 'underline'}}>Values of the house:</span>
+              <ul className={this.state.title.toLowerCase()+'-titles'}>
+                <HouseContent
+                  classNameTitle={'-house'}
+                  title={'House:'}
+                  content={' '+house.name}
+                />
+                <HouseContent
+                  classNameTitle={'-founder'}
+                  title={'Founder:'}
+                  content={' '+house.founder}
+                />
+                <HouseContent
+                  classNameTitle={'-mascot'}
+                  title={'Mascot:'}
+                  content={' '+house.mascot.slice(0, 1).toUpperCase()+house.mascot.slice(1, 10)}
+                />
+                <HouseContent
+                  classNameTitle={'-houseghost'}
+                  title={'Ghost:'}
+                  content={' '+house.houseGhost}
+                />
+                <HouseContent
+                  classNameTitle={'-headofhouse'}
+                  title={'Head:'}
+                  content={' '+house.headOfHouse}
+                />
+                <HouseContent
+                  classNameTitle={'-values'}
+                  title={'Values:'}
+                  content=
                   {house.values.map((value) => {
                     return (
                       <div>{value}</div>
                     );
-                  })}
-                </h3>
-                <h3><span style={{textDecoration: 'underline'}}>Colors:</span>
+                  })}/>
+                <HouseContent 
+                  classNameTitle={'-colors'}
+                  title={'Colors:'}
+                  content=
                   {house.colors.map((color)=> {
                     return (
                       <div>{color}</div>
                     );
-                  })}
-                </h3>
+                  })}/>
               </ul>
             </div>
           );
@@ -204,3 +229,18 @@ class House extends Component {
   }
 }
 
+class HouseContent extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      title: 'house-content'
+    }
+  }
+  render() {
+    return (
+      <div style={{width: '300px', height: 'auto'}} className={this.props.classNameContainer}>
+        <h3 className={this.state.title+'-'+this.props.classNameTitle}><span style={{textDecoration: 'underline'}}>{this.props.title}</span>{this.props.content}</h3>
+      </div>
+    );
+  }
+}

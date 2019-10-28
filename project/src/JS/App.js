@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {BrowserRouter} from 'react-router-dom';
 import Router from './Router';
-import './App.css';
-import './Sections.css';
-import './Buttons.css';
+import '../CSS/App.css';
+import '../CSS/Sections.css';
+import '../CSS/Buttons.css';
 
 /*
   This version contains the second state of the page with styles but no funcionallity.

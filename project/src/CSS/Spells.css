@@ -1,0 +1,21 @@
+.spells-table-titles {
+  color: white;
+  text-align: left;
+  background-color: rgba(120, 120, 120, 1);
+}
+.spells-table-content-name {
+  width: 20%;
+  background-color: rgb(34, 71, 120);
+}
+.spells-table-content-type {
+  width: 20%;
+  background-color: rgb(34, 71, 120);
+}
+.spells-table-content-effect {
+  width: 50%;
+  background-color: rgb(34, 71, 120);
+}
+
+.spells-table {
+  width: 70%;
+}

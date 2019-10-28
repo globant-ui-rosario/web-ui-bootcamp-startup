@@ -4,7 +4,7 @@ import {Content} from './Content';
 import Footer from './Footer'
 import TableTitle from './TableTitle';
 import querystring from 'query-string';
-import './Characters.css';
+import '../CSS/Characters.css';
 
 class Character extends Component {
   constructor(props){
