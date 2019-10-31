@@ -6,7 +6,7 @@ class SearchBar extends Component {
   }
   render() {
     return (
-      <input className='search-bar' type='text' placeholder='Search...' onChange={this.props.inputChange} value={this.props.valueChange} style={{display: this.props.display}}></input>
+      <input id='search-bar' type='text' placeholder='Search...' onChange={this.props.inputChange} value={this.props.valueChange} style={{display: this.props.display}}></input>
     );
   }
 }
@@ -17,7 +17,7 @@ class Content extends Component {
   }
   render(){
     return(
-      <section>
+      <section style={{display: this.props.displayContent}} className={this.props.className}>
         {this.props.content}
       </section>
     );

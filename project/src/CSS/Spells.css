@@ -1,3 +1,23 @@
+@font-face {
+  font-family: 'HarryPotter';
+  src: url(../FONTS/HarryPotter.TTF)
+}
+
+.spells-footer {
+  position: fixed !important;
+  bottom: 0px;
+}
+.spells-header {
+  font-family: 'HarryPotter';
+  font-size: 30px;
+}
+.spells-buttoncontainer {
+  font-size: 35px !important;
+  font-weight: lighter !important;
+}
+.spells-section {
+  height: 3665px;
+}
 .spells-table-titles {
   color: white;
   text-align: left;
@@ -17,5 +37,7 @@
 }
 
 .spells-table {
-  width: 70%;
+  position: absolute;
+  left: 25%;
+  width: 50%;
 }

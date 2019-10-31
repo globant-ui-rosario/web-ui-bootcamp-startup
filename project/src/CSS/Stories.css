@@ -1,0 +1,50 @@
+@font-face {
+  font-family: Berry Rotunda;
+  src: url(../FONTS/BerryRotunda.ttf);
+}
+
+.stories-section {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  color: #232323 !important;
+  height: auto;
+}
+
+.stories-header {
+  font-family: 'Berry Rotunda';
+  text-transform: lowercase;
+}
+
+.stories-container {
+  font-family: 'Berry Rotunda';
+  font-weight: 200;
+  margin-top: 50px;
+  padding-bottom: 90px;
+  left: 15%;
+  position: relative;
+  width: 70%;
+}
+
+.stories-footer {
+  position: fixed !important;
+  bottom: 0px;
+}
+
+.stories-showstory {
+  width: 200px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  color: rgb(240, 165, 0);
+  background-color: #232323;
+  text-align: center;
+  position: absolute;
+  border-radius: 4px;
+  margin-bottom: 110px;
+}
+
+
+.section-stories {
+  background-color: rgb(240, 165, 0);
+  height: auto;
+}

@@ -8,126 +8,73 @@ import GryffindorShield from '../LOGOS/Gryffindor.png'
 import SlytherinShield from '../LOGOS/Slytherin.jpg'
 import HufflepuffShield from '../LOGOS/Hufflepuff.jpg'
 import RavenclawShield from '../LOGOS/Ravenclaw.jpg'
+import {Link, animateScroll as scroll} from 'react-scroll';
 
 export default class Home extends Component {
   constructor(props){
     super(props);
     this.state = {
-      content: 'Home section'
+      className: 'home',
     }
   }
   render() {
     return (
       <div className='section-home'>
-        <Header 
-          title={this.state.content + ' Header'}
+        <Header
+          section={this.state.className}
           displaySearchBar = {'none'}
+          buttonContainerClassName={this.state.className+'-buttoncontainer'}
         />
         <div>
           <Content 
             content= {
               <div className='home-sections'>
-                <Gryffindor/>
-                <Slytherin/>
-                <Ravenclaw/>
-                <Hufflepuff/>
+                <NameOfHouse title='Gryffindor' shield={GryffindorShield}/>
+                <NameOfHouse title='Slytherin' shield={SlytherinShield}/>
+                <NameOfHouse title='Ravenclaw' shield={RavenclawShield}/>
+                <NameOfHouse title='Hufflepuff' shield={HufflepuffShield}/>
               </div>
             }
           />
         </div>
         <Footer
-          title={this.state.content + ' Footer'} />
+          title={this.state.content + ' Footer'}
+          className={this.state.className+'-footer'} />
       </div>
     );
   }
 }
 
-class Gryffindor extends Component {
+class NameOfHouse extends Component {
   constructor(props){
     super(props);
     this.state = {
-      title: 'Gryffindor'
+      title: this.props.title
     }
   }
   render() {
     const {title} = this.state
     return (
       <div className={'home-'+title.toLowerCase()+'-section'}>
+          <Link
+            activeClass="active"
+            spy={true}
+            to={this.state.title.toLowerCase()+'-section'}
+            smooth={true}
+            offset={-10}
+            duration={500}>
           <Shield
-          source={GryffindorShield}
-          alt={this.state.title+' Shield'}
-          width={'199'}
-          height={'239'}/>
-        <House 
-          houseName={title}/>
-      </div>
-    );
-  }
-}
-
-class Slytherin extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      title: 'Slytherin'
-    }
-  }
-  render() {
-    const {title} = this.state
-    return (
-      <div className={'home-'+title.toLowerCase()+'-section'}>
-        <Shield 
-          source={SlytherinShield}
-          alt={this.state.title+' Shield'}
-        />
-        <House
-          houseName={title}/>
-      </div>
-    );
-  }
-}
-
-class Ravenclaw extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      title: 'Ravenclaw'
-    }
-  }
-  render() {
-    const {title} = this.state
-    return (
-      <div className={'home-'+title.toLowerCase()+'-section'}>
-        <Shield
-          source={RavenclawShield}
-          alt={this.state.title+' Shield'}
-        />
-        <House
-          houseName={title}
-        />
-      </div>
-    );
-  }
-}
-
-class Hufflepuff extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      title: 'Hufflepuff'
-    }
-  }
-  render() {
-    const {title} = this.state
-    return (
-      <div className={'home-'+title.toLowerCase()+'-section'}>
-        <Shield 
-          source={HufflepuffShield}
-          alt={this.state.title+' Shield'}
-        />
-        <House 
-          houseName={title}
-        />
+            className={this.state.title.toLowerCase()+'-shield'}
+            source={this.props.shield}
+            alt={this.state.title+' Shield'}
+            width={'199'}
+            height={'239'}/>
+          </Link>
+          <House
+            className={this.state.title.toLowerCase()+'-section'}
+            houseName={title}
+            id={this.state.title.toLowerCase()+'-section'}
+          />
       </div>
     );
   }
@@ -136,8 +83,14 @@ class Hufflepuff extends Component {
 class Shield extends Component {
   render(){
     return (
-      <div style={{textAlign: 'center'}}>
-        <img width={this.props.width} height={this.props.height} src={this.props.source} style={{borderRadius: '100px', marginTop: '20px'}} alt={this.props.alt}></img>
+      <div className='shield' style={{textAlign: 'center'}}>
+        <img
+          width={this.props.width}
+          height={this.props.height}
+          src={this.props.source}
+          style={{borderRadius: '100px', marginTop: '20px'}}
+          alt={this.props.alt}>  
+        </img>
       </div>
     );
   }
@@ -170,7 +123,7 @@ class House extends Component {
     const {houses} = this.state
     const {houseName} = this.props
     return (
-      <div>
+      <div className='home-info' id={this.props.id}>
       {houses.map((house) => {
         if (house.name === houseName){
           return (
@@ -238,8 +191,8 @@ class HouseContent extends Component {
   }
   render() {
     return (
-      <div style={{width: '300px', height: 'auto'}} className={this.props.classNameContainer}>
-        <h3 className={this.state.title+'-'+this.props.classNameTitle}><span style={{textDecoration: 'underline'}}>{this.props.title}</span>{this.props.content}</h3>
+      <div style={{width: '300px', height: 'auto', marginBottom: '30px'}} className={this.props.classNameContainer}>
+        <div className={this.state.title+'-'+this.props.classNameTitle}><span>{this.props.title}</span>{this.props.content}</div>
       </div>
     );
   }

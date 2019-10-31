@@ -30,6 +30,8 @@ export default class Spells extends Component {
     super(props);
     this.state = {
       content: 'Spells section',
+      title: 'spells',
+      className: 'spells',
       spells: [],
       searchSpells: '',
     }
@@ -60,16 +62,20 @@ export default class Spells extends Component {
     return (
       <div className='section-spells'>
         <Header 
-          title={this.state.content + ' Header'}
+          textTitle = {'Harry Potter API Project'}
           onChange={this.handleInputChange}
+          section={this.state.title}
+          buttonContainerClassName={this.state.className+'-buttoncontainer'}
         />
         <Content
+          className={this.state.className+'-section'}
           content=
           {<SpellsList
             filteredSpells={filteredSpells}/>}
         />
         <Footer
-          title={this.state.content + ' Footer'} 
+          title={this.state.content + ' Footer'}
+          className={this.state.className+'-footer'}
         />
       </div>
     );

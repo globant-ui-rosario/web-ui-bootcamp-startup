@@ -17,9 +17,9 @@ export default class Header extends Component{
   }
   render() {
     return (
-      <header className='header'>
+      <header id='header' className={this.props.section+'-header'}>
         <div className='header-mobile-container'>
-          <h1 className={this.props.title.toLowerCase()+'-textcontent'}>
+          <h1 id='header-textcontent'>
           {this.state.title}
           </h1>
           <ButtonContainerMobile/>
@@ -28,6 +28,7 @@ export default class Header extends Component{
           inputChange = {this.props.onChange}
           valueChange = {this.props.onValue}
           display = {this.props.displaySearchBar}
+          className = {this.props.buttonContainerClassName}
         />
       </header>
     );
@@ -37,11 +38,11 @@ export default class Header extends Component{
 class ButtonContainer extends Component {
   render() {
     return (
-      <div className='header-button-container'>
+      <div id='header-button-container' className={this.props.className}>
         <Button title='Home'/>
         <Button title='Chars'/>
         <Button title='Spells'/>
-        <Button title='Info'/>
+        <Button title='Stories'/>
         <SearchBar
           inputChange = {this.props.inputChange}
           valueChange = {this.props.valueChange}
@@ -93,3 +94,5 @@ class ButtonM extends Component {
     );
   }
 }
+
+export {Button}

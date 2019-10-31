@@ -3,7 +3,7 @@ import {Route, Redirect, Switch} from 'react-router-dom';
 import Home from './Home'
 import Characters from './Characters'
 import Spells from './Spells'
-import Info from './Info'
+import Stories from './Stories'
 
 export default class Router extends Component {
   render() {
@@ -23,8 +23,8 @@ export default class Router extends Component {
             path='/spells'
             component={Spells}/>
           <Route
-            path='/info'
-            component={Info}/>
+            path='/stories'
+            component={Stories}/>
         </Switch>
       </div>
     );

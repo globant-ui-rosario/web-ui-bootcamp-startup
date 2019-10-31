@@ -108,7 +108,8 @@ export default class Characters extends Component {
     this.state = {
       loading: true,
       characters: [],
-      content: 'Characters section',
+      className: 'characters',
+      title: 'characters',
       searchCharacters: '',
     }
   }
@@ -136,17 +137,21 @@ export default class Characters extends Component {
       return character.name.toLowerCase().includes(this.state.searchCharacters.toLowerCase())
     })
     return (
-      <div className='section-characters'>
-        <Header 
-          title={this.state.content + ' Header'}
+      <div className={this.state.className+'-section'}>
+        <Header
+          textTitle={'Harry Potter API Project'} 
           onChange = {this.handleInputChange}
+          section={this.state.title}
+          buttonContainerClassName={this.state.className+'-buttoncontainer'}
         />
         <Content
+          className={this.state.className+'-section'}
           content =
           {<CharactersList
             filteredCharacters={filteredCharacters}/>}
         />
         <Footer 
+          className={this.state.className+'-footer'}
           title={this.state.content + ' Footer'}
         />
       </div>

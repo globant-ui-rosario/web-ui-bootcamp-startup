@@ -1,6 +1,33 @@
+@font-face {
+  font-family: 'HarryPotter';
+  src: url(../FONTS/HarryPotter.TTF)
+}
+
 .home-sections {
   position: relative;
-  height: 2000px;
+  font-family: 'HarryPotter';
+  font-size: 30px;
+  font-weight: 200 !important;
+  height: 1100px;
+}
+
+.home-header {
+  font-family: 'HarryPotter';
+  font-size: 30px;
+}
+
+.home-buttoncontainer {
+  font-size: 35px !important;
+  font-weight: lighter !important;
+}
+
+.shield {
+  position: relative;
+  top: 85px;
+}
+.home-info {
+  position: relative;
+  margin-top: 200px;
 }
 
 .home-gryffindor-section {

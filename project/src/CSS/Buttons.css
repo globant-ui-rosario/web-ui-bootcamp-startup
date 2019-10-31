@@ -1,4 +1,4 @@
-.header-button-container {
+#header-button-container {
   font-weight: bold;
   font-size: 20px;
   top: 15%;
@@ -150,7 +150,7 @@
   transform: translate(-50%, -50%);
 }
 
-.info-button {
+.stories-button {
   width: 50%;
   height: 50%;
   background-color: rgb(240, 165, 0);
@@ -160,11 +160,11 @@
   border-bottom-right-radius: 10px;
 }
 
-.info-button:hover {
+.stories-button:hover {
   background-color: rgb(260, 185, 20);
 }
 
-.info-button-textcontent {
+.stories-button-textcontent {
   position: absolute;
   float: left;
   left: 50%;
