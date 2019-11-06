@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'HarryPotter';
+  src: url(../Assets/Fonts/HarryPotter.TTF)
+}
+
+@import "../globalstyles";
+
+.characters-header {
+  font-family: 'HarryPotter';
+  font-size: 30px;
+}
+
+.characters-header-textcontent {
+  @include headerSettings(28%);
+}
+
+.characters-footer {
+  position: absolute;
+  bottom: 0px;
+}
+
+.characters-buttoncontainer {
+  font-size: 35px !important;
+  font-weight: lighter !important;
+}
+
+.characters-table-titles {
+  @include tableTitles();
+  .characters-table-title-name {
+    width: 20%;
+  }
+  .characters-table-title-type {
+    width: 15%;
+  }
+  .characters-table-title-house {
+    width: 15%;
+  }
+  .characters-table-title-role {
+    width: 30%;
+  }
+  .characters-table-title-blood {
+    width: 20%;
+  }
+}
+
+.characters-table-content-name {
+  @include tableSettings(2000px, $slytherinColor);
+}
+.characters-table-content-species {
+  @include tableSettings(2%, $slytherinColor);
+}
+.characters-table-content-house {
+  @include tableSettings(2%, $slytherinColor);
+}
+.characters-table-content-blood {
+  @include tableSettings(10%, $slytherinColor);
+}
+.characters-table-content-role {
+  font-size: 14px;
+  @include tableSettings(20%, $slytherinColor);
+}
+
+.characters-table {
+  @include table();
+}
+
+.section-characters {
+  background-color: $slytherinColor;
+}
+
+.characters-table-title-name {
+  position: relative;
+  left: 0px;
+  width: inherit;
+}

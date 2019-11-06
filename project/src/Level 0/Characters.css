@@ -1,0 +1,100 @@
+@font-face {
+  font-family: 'HarryPotter';
+  src: url(../Assets/Fonts/HarryPotter.TTF);
+}
+
+.characters-header {
+  font-family: 'HarryPotter';
+  font-size: 30px;
+}
+
+.characters-header-textcontent {
+  -webkit-transition: color 1s, font-size 1s, top 1s;
+  transition: color 1s, font-size 1s, top 1s;
+  cursor: none;
+}
+
+.characters-header-textcontent:hover {
+  position: relative !important;
+  top: 28% !important;
+  font-size: 300%;
+  color: #ffe5ae;
+}
+
+.characters-footer {
+  position: absolute;
+  bottom: 0px;
+}
+
+.characters-buttoncontainer {
+  font-size: 35px !important;
+  font-weight: lighter !important;
+}
+
+.characters-table-titles {
+  color: white;
+  text-align: left;
+  background-color: #787878;
+}
+
+.characters-table-titles .characters-table-title-name {
+  width: 20%;
+}
+
+.characters-table-titles .characters-table-title-type {
+  width: 15%;
+}
+
+.characters-table-titles .characters-table-title-house {
+  width: 15%;
+}
+
+.characters-table-titles .characters-table-title-role {
+  width: 30%;
+}
+
+.characters-table-titles .characters-table-title-blood {
+  width: 20%;
+}
+
+.characters-table-content-name {
+  width: 2000px;
+  background-color: #2a5626;
+}
+
+.characters-table-content-species {
+  width: 2%;
+  background-color: #2a5626;
+}
+
+.characters-table-content-house {
+  width: 2%;
+  background-color: #2a5626;
+}
+
+.characters-table-content-blood {
+  width: 10%;
+  background-color: #2a5626;
+}
+
+.characters-table-content-role {
+  font-size: 14px;
+  width: 20%;
+  background-color: #2a5626;
+}
+
+.characters-table {
+  width: 100%;
+  height: 100%;
+}
+
+.section-characters {
+  background-color: #204c1c;
+}
+
+.characters-table-title-name {
+  position: relative;
+  left: 0px;
+  width: inherit;
+}
+/*# sourceMappingURL=Characters.css.map */

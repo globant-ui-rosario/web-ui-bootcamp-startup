@@ -1,0 +1,67 @@
+@font-face {
+  font-family: Berry Rotunda;
+  src: url(../Assets/Fonts/BerryRotunda.ttf);
+}
+
+@import "../globalstyles";
+
+.stories-header {
+  font-family: 'Berry Rotunda';
+  text-transform: lowercase;
+}
+
+.stories-header-textcontent {
+  @include headerSettings(35%);
+}
+
+.stories-footer {
+  position: relative;
+  bottom: 0px;
+}
+
+.stories-section {
+  font-size: 20px;
+  font-weight: bold;
+  color: $mainColor;
+  height: auto;
+  -webkit-transition: display 5s;
+  transition: display 5s;
+}
+
+.stories-container {
+  position: relative;
+  width: 70%;
+  left: 15%;
+  font-family: 'Berry Rotunda';
+  font-weight: 550;
+  margin: 50px 0px 180px 0px;
+}
+
+.stories-showstory {
+  width: 200px;
+  padding: 10px 0px 5px 0px;
+  color: $hufflepuffColor + rgb(30, 5, 0) + 20;
+  background-color: $mainColor;
+  text-align: center;
+  position: absolute;
+  border-radius: 4px;
+  margin-bottom: 110px;
+  -webkit-transition: width 0.75s, padding 0.75s, background-color 0.2s;
+  transition: width 0.75s, padding 0.75s, background-color 0.2s;
+  &:hover {
+    width: +20%;
+    padding: 15px 0px 10px 0px;
+    background-color: $mainColor + rgb(5, 5, 5);
+    cursor: pointer;
+  }
+}
+
+.section-stories {
+  background-color: $hufflepuffColor + rgb(30, 5, 0) + 20;
+  height: auto;
+}
+
+.stories-text {
+  -webkit-transition: display 5s;
+  transition: display 5s;
+}

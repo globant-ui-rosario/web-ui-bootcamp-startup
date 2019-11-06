@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'HarryPotter';
+  src: url(../Assets/Fonts/HarryPotter.TTF)
+}
+
+@import "../globalstyles";
+
+
+.spells-header {
+  font-family: 'HarryPotter';
+  font-size: 30px;
+}
+
+.spells-header-textcontent {
+  @include headerSettings(28%);
+}
+
+.spells-footer {
+  position: absolute;
+  bottom: 0px;
+}
+
+.spells-buttoncontainer {
+  font-size: 35px !important;
+  font-weight: lighter !important;
+}
+
+.spells-table-titles {
+  @include tableTitles();
+  .spells-table-title-name {
+    width: 20%;
+  }
+  .spells-table-title-type {
+    width: 20%;
+  }
+  .spells-table-title-effect {
+    width: 33%;
+  }
+}
+
+.spells-table-content-name {
+  @include tableSettings(2000px, $ravenclawColor+5);
+}
+
+.spells-table-content-type {
+  @include tableSettings(20%, $ravenclawColor+5);
+}
+
+.spells-table-content-effect {
+  @include tableSettings(33%, $ravenclawColor+5);
+}
+
+.spells-table {
+  @include table();
+}

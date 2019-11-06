@@ -1,0 +1,219 @@
+@font-face {
+  font-family: 'HarryPotter';
+  src: url(../Assets/Fonts/HarryPotter.TTF);
+}
+
+.home-header {
+  font-family: 'HarryPotter';
+  font-size: 30px;
+}
+
+.home-subheader {
+  background-color: #1e1e1e;
+  font-family: "HarryPotter";
+  font-weight: 400;
+  color: #fffad2;
+  font-size: 30px;
+  padding: 4px 0px 4px 0px;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.home-sections {
+  position: relative;
+  font-family: 'HarryPotter';
+  font-size: 30px;
+  font-weight: 200 !important;
+  height: 1100px;
+}
+
+.home-header-textcontent {
+  -webkit-transition: color 1s, font-size 1s, top 1s;
+  transition: color 1s, font-size 1s, top 1s;
+  cursor: none;
+}
+
+.home-header-textcontent:hover {
+  position: relative !important;
+  top: 28% !important;
+  font-size: 300%;
+  color: #ffe5ae;
+}
+
+.home-buttoncontainer {
+  font-size: 35px !important;
+  font-weight: lighter !important;
+}
+
+.gryffindor-shield {
+  position: relative;
+  top: 60px;
+  -webkit-transition: width 0.35s, height 0.35s;
+  transition: width 0.35s, height 0.35s;
+  cursor: pointer;
+  display: block;
+}
+
+.gryffindor-shield-img {
+  -webkit-transition: width 0.35s, height 0.35s;
+  transition: width 0.35s, height 0.35s;
+  border-radius: 500px;
+}
+
+.gryffindor-shield-img:hover {
+  width: 249px;
+  height: 289px;
+}
+
+.slytherin-shield {
+  position: relative;
+  top: 60px;
+  -webkit-transition: width 0.35s, height 0.35s;
+  transition: width 0.35s, height 0.35s;
+  cursor: pointer;
+  display: block;
+}
+
+.slytherin-shield-img {
+  -webkit-transition: width 0.35s, height 0.35s;
+  transition: width 0.35s, height 0.35s;
+  border-radius: 500px;
+}
+
+.slytherin-shield-img:hover {
+  width: 249px;
+  height: 289px;
+}
+
+.ravenclaw-shield {
+  position: relative;
+  top: 60px;
+  -webkit-transition: width 0.35s, height 0.35s;
+  transition: width 0.35s, height 0.35s;
+  cursor: pointer;
+  display: block;
+}
+
+.ravenclaw-shield-img {
+  -webkit-transition: width 0.35s, height 0.35s;
+  transition: width 0.35s, height 0.35s;
+  border-radius: 500px;
+}
+
+.ravenclaw-shield-img:hover {
+  width: 249px;
+  height: 289px;
+}
+
+.hufflepuff-shield {
+  position: relative;
+  top: 60px;
+  -webkit-transition: width 0.35s, height 0.35s;
+  transition: width 0.35s, height 0.35s;
+  cursor: pointer;
+  display: block;
+}
+
+.hufflepuff-shield-img {
+  -webkit-transition: width 0.35s, height 0.35s;
+  transition: width 0.35s, height 0.35s;
+  border-radius: 500px;
+}
+
+.hufflepuff-shield-img:hover {
+  width: 249px;
+  height: 289px;
+}
+
+.home-gryffindor-info-not-scrolled {
+  -webkit-transition: color 1s;
+  transition: color 1s;
+  position: relative;
+  top: 230px;
+}
+
+.home-gryffindor-info-scrolled {
+  -webkit-transition: color 1s;
+  transition: color 1s;
+  position: relative;
+  top: 230px;
+  color: #640909;
+}
+
+.home-slytherin-info-not-scrolled {
+  -webkit-transition: color 1s;
+  transition: color 1s;
+  position: relative;
+  top: 230px;
+}
+
+.home-slytherin-info-scrolled {
+  -webkit-transition: color 1s;
+  transition: color 1s;
+  position: relative;
+  top: 230px;
+  color: #204c1c;
+}
+
+.home-ravenclaw-info-not-scrolled {
+  -webkit-transition: color 1s;
+  transition: color 1s;
+  position: relative;
+  top: 230px;
+}
+
+.home-ravenclaw-info-scrolled {
+  -webkit-transition: color 1s;
+  transition: color 1s;
+  position: relative;
+  top: 230px;
+  color: #102d59;
+}
+
+.home-hufflepuff-info-not-scrolled {
+  -webkit-transition: color 1s;
+  transition: color 1s;
+  position: relative;
+  top: 230px;
+}
+
+.home-hufflepuff-info-scrolled {
+  -webkit-transition: color 1s;
+  transition: color 1s;
+  position: relative;
+  top: 230px;
+  color: #bb8208;
+}
+
+.home-gryffindor-section {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  left: 0%;
+  background-color: #640909;
+}
+
+.home-slytherin-section {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  left: 25%;
+  background-color: #204c1c;
+}
+
+.home-ravenclaw-section {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  left: 50%;
+  background-color: #102d59;
+}
+
+.home-hufflepuff-section {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  left: 75%;
+  background-color: #bb8208;
+}
+/*# sourceMappingURL=Home.css.map */

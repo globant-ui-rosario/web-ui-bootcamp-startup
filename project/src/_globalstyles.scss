@@ -1,0 +1,33 @@
+$mainColor: #232323;
+$gryffindorColor: rgb(100, 9, 9);
+$slytherinColor: rgb(32, 76, 28);
+$ravenclawColor: rgb(16, 45, 89);
+$hufflepuffColor: rgb(187, 130, 8);
+
+@mixin table() {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin tableSettings($width, $color) {
+  width: $width;
+  background-color: $color + 10;
+}
+
+@mixin tableTitles() {
+  color: white;
+  text-align: left;
+  background-color: rgba(120, 120, 120, 1);
+}
+
+@mixin headerSettings($top) {
+  -webkit-transition: color 1s, font-size 1s, top 1s;
+  transition: color 1s, font-size 1s, top 1s;
+  cursor: none;
+  &:hover {
+    position: relative !important;
+    top: $top !important;
+    font-size: 300%;
+    color: rgb(255, 229, 174);
+  }
+}

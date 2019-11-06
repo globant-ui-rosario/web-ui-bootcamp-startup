@@ -1,0 +1,186 @@
+@font-face {
+  font-family: 'HarryPotter';
+  src: url(../Assets/Fonts/HarryPotter.TTF)
+}
+
+@import "../globalstyles";
+
+@mixin shieldSettings($transitionTime) {
+  position: relative;
+  top: 60px;
+  -webkit-transition: width $transitionTime, height $transitionTime;
+  transition: width $transitionTime, height $transitionTime;
+  cursor: pointer;
+  display: block;
+}
+
+@mixin pepe {
+  .gryffindor-shield {
+    display: none;
+  }
+  .slytherin-shield {
+    display: none;
+  }
+  .ravenclaw-shield {
+    display: none;
+  }
+  .hufflepuff-shield {
+    display: none;
+  }
+}
+
+
+@mixin shieldImgSettings($transitionTime) {
+  -webkit-transition: width 0.35s, height 0.35s;
+  transition: width 0.35s, height 0.35s;
+  border-radius: 500px;
+}
+
+@mixin houseInfo {
+  -webkit-transition: color 1s;
+  transition: color 1s;
+  position: relative;
+  top: 230px;
+}
+
+@mixin houseSection ($color, $left) {
+  position: absolute;
+  width: 25%; height: 100%;
+  left: $left;
+  background-color: $color;
+}
+
+.home-header {
+  font-family: 'HarryPotter';
+  font-size: 30px;
+}
+
+.home-subheader {
+  background-color: $mainColor - 5;
+  font-family: "HarryPotter";
+  font-weight: 400;
+  color: rgb(255, 250, 210);
+  font-size: 30px;
+  padding: 4px 0px 4px 0px;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.home-sections {
+  position: relative;
+  font-family: 'HarryPotter';
+  font-size: 30px;
+  font-weight: 200 !important;
+  height: 1100px;
+}
+
+.home-header-textcontent {
+  @include headerSettings(28%);
+}
+
+
+.home-buttoncontainer {
+  font-size: 35px !important;
+  font-weight: lighter !important;
+}
+
+.gryffindor-shield {
+  @include shieldSettings(0.35s);
+}
+
+.gryffindor-shield-img {
+  @include shieldImgSettings(0.35s);
+  &:hover {
+    width: 199px + 50px;
+    height: 239px + 50px;
+  }
+}
+
+.slytherin-shield {
+  @include shieldSettings(0.35s);
+}
+
+.slytherin-shield-img {
+  @include shieldImgSettings(0.35s);
+  &:hover {
+    width: 199px + 50px;
+    height: 239px + 50px;
+  }
+}
+
+.ravenclaw-shield {
+  @include shieldSettings(0.35s);
+}
+
+.ravenclaw-shield-img {
+  @include shieldImgSettings(0.35s);
+  &:hover {
+    width: 199px + 50px;
+    height: 239px + 50px;
+  }
+}
+
+.hufflepuff-shield {
+  @include shieldSettings(0.35s);
+}
+
+.hufflepuff-shield-img {
+  @include shieldImgSettings(0.35s);
+  &:hover {
+    width: 199px + 50px;
+    height: 239px + 50px;
+  }
+}
+
+.home-gryffindor-info-not-scrolled {
+  @include houseInfo;
+}
+
+.home-gryffindor-info-scrolled {
+  @include houseInfo;
+  color: $gryffindorColor;
+}
+
+.home-slytherin-info-not-scrolled {
+  @include houseInfo;
+}
+
+.home-slytherin-info-scrolled {
+  @include houseInfo;
+  color: $slytherinColor;
+}
+
+.home-ravenclaw-info-not-scrolled {
+  @include houseInfo;
+}
+
+.home-ravenclaw-info-scrolled {
+  @include houseInfo;
+  color: $ravenclawColor;
+}
+
+.home-hufflepuff-info-not-scrolled {
+  @include houseInfo;
+}
+
+.home-hufflepuff-info-scrolled {
+  @include houseInfo;
+  color: $hufflepuffColor;
+}
+
+.home-gryffindor-section {
+  @include houseSection($gryffindorColor, 0%);
+}
+
+.home-slytherin-section {
+  @include houseSection($slytherinColor, 25%);
+}
+
+.home-ravenclaw-section {
+  @include houseSection($ravenclawColor, 50%);
+}
+
+.home-hufflepuff-section {
+  @include houseSection($hufflepuffColor, 75%);
+}
+

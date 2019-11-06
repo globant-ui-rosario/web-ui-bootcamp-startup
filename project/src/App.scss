@@ -1,0 +1,49 @@
+@import "./globalstyles";
+
+html {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: $mainColor;
+}
+
+#document {
+  width: 100%;
+  height: 100%;
+}
+
+#header {
+  position: static;
+  top: 0px;
+  width: 100%;
+  height: 180px;
+  background-color: $mainColor + 10;
+}
+
+#search-bar {
+  font-size: 15px;
+  outline: none;
+  position: absolute;
+  bottom: -29px;
+  width: 225px;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+#header-textcontent {
+  display: inline;
+  position: relative;
+  top: 35%;
+  left: 5%;
+}
+
+#footer {
+  position: relative;
+  text-align: center;
+  bottom: 0px;
+  width: 100%;
+  padding: 2% 0% 2% 0%;
+  background-color: $mainColor + 5;
+  font-weight: 600;
+}

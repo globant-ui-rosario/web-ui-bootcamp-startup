@@ -1,0 +1,118 @@
+@font-face {
+  font-family: Harry Potter;
+  src: url(../Assets/Fonts/HarryPotter.TTF);
+}
+
+#header-button-container {
+  text-transform: capitalize;
+  font-size: 35px;
+  top: 15%;
+  right: 5%;
+  width: 230px;
+  height: 120px;
+  position: relative;
+  float: right;
+  background-color: inherit;
+  font-family: "Harry Potter";
+}
+
+.home-button-textcontent {
+  top: 25%;
+  width: 100%;
+  position: relative;
+  padding: 0% 25% 0% 25%;
+  text-decoration: none;
+  color: white;
+}
+
+.chars-button-textcontent {
+  top: 25%;
+  width: 100%;
+  position: relative;
+  padding: 0% 25% 0% 25%;
+  text-decoration: none;
+  color: white;
+}
+
+.spells-button-textcontent {
+  top: 25%;
+  width: 100%;
+  position: relative;
+  padding: 0% 25% 0% 25%;
+  text-decoration: none;
+  color: white;
+}
+
+.stories-button-textcontent {
+  top: 25%;
+  width: 100%;
+  position: relative;
+  padding: 0% 22% 0% 22%;
+  text-decoration: none;
+  color: white;
+}
+
+.home-button {
+  top: 0px;
+  left: 0px;
+  border-top-left-radius: 10px;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-color: #640909;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.home-button:hover {
+  background-color: #870909;
+}
+
+.chars-button {
+  top: 0px;
+  right: 0px;
+  border-top-right-radius: 10px;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-color: #204c1c;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.chars-button:hover {
+  background-color: #256a26;
+}
+
+.spells-button {
+  bottom: 0px;
+  left: 0px;
+  border-bottom-left-radius: 10px;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-color: #102d59;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.spells-button:hover {
+  background-color: #103795;
+}
+
+.stories-button {
+  bottom: 0px;
+  right: 0px;
+  border-bottom-right-radius: 10px;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-color: #bb8208;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.stories-button:hover {
+  background-color: #f79b08;
+}
+/*# sourceMappingURL=Buttons.css.map */

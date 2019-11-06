@@ -1,0 +1,88 @@
+@font-face {
+  font-family: Harry Potter;
+  src: url(./Assets/Fonts/HarryPotter.TTF);
+}
+
+@import "./globalstyles";
+
+@mixin buttonSettings($color, $colorHover, $transitionTime) {
+  position: absolute;
+  width: 50%; height: 50%;
+  background-color: $color;
+  @include buttonHoverTransitions($transitionTime);
+  
+  &:hover{
+    background-color: $color + $colorHover;
+  }
+}
+
+@mixin buttonHoverTransitions($time) {
+  -webkit-transition: background-color $time;
+  transition: background-color $time;
+}
+
+@mixin buttonTextContentPosAndSize($position, $size, $padding) {
+  top: $position;
+  width: $size;
+  position: relative;
+  padding: $padding;
+  text-decoration: none;
+  color: white;
+}
+
+#header-button-container {
+  text-transform: capitalize;
+  font-size: 35px;
+  top: 15%;
+  right: 5%;
+  width: 230px;
+  height: 120px;
+  position: relative;
+  float: right;
+  background-color: inherit;
+  font-family: "Harry Potter";
+}
+
+.home-button-textcontent {
+  @include buttonTextContentPosAndSize(25%, 100%, 0% 25% 0% 25%);
+}
+
+.chars-button-textcontent {
+  @include buttonTextContentPosAndSize(25%, 100%, 0% 25% 0% 25%);
+}
+
+.spells-button-textcontent {
+  @include buttonTextContentPosAndSize(25%, 100%, 0% 25% 0% 25%);
+}
+
+.stories-button-textcontent {
+  @include buttonTextContentPosAndSize(25%, 100%, 0% 22% 0% 22%);
+}
+
+.home-button {
+  top: 0px; left: 0px;
+  border-top-left-radius: 10px;
+  $colorHover: rgb(35, 0, 0);
+  @include buttonSettings($gryffindorColor, $colorHover, 0.5s);
+}
+
+.chars-button {
+  top: 0px; right: 0px;
+  border-top-right-radius: 10px;
+  $colorHover: rgb(5, 30, 10);
+  @include buttonSettings($slytherinColor, $colorHover, 0.5s);
+}
+
+.spells-button {
+  bottom: 0px; left: 0px;
+  border-bottom-left-radius: 10px;
+  $colorHover: rgb(0, 10, 60);
+  @include buttonSettings($ravenclawColor, $colorHover, 0.5s);
+}
+
+.stories-button {
+  bottom: 0px; right: 0px;
+  border-bottom-right-radius: 10px;
+  $colorHover: rgb(60, 25, 0);
+  @include buttonSettings($hufflepuffColor, $colorHover, 0.5s);
+}
